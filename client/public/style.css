@@ -8,16 +8,293 @@ ol, ul, li {list-style:none;display:block;}
 table {border-collapse: collapse;border-spacing:0;}
 a img {border: none;}
 
-input,
-textarea,
-select,
-button,
-input{appearance: none; border-radius: 0;}
+h1 {
+  width: 151px; 
+  height: 151px;
+  padding: 3px; 
+  border: 2px; 
+  margin: 10px; 
+  position: relative; 
+  transform: rotate3d(1, 2, 3, 20deg);
+  transition: width 2s;
+  font-size: 25px;
+  background-color:deeppink;
+  animation-name: h1animation;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  font-size: 22px; 
+  font-stretch: condensed; 
+  font-weight: lighter; 
+  line-height: normal; 
+  color: black; 
+  text-decoration: underline overline; 
+  text-shadow: white 2px 5px; 
+  letter-spacing: -1px;
+}
 
-button,
-a{cursor: pointer; color: inherit;}
-textarea{resize: none;}
+@keyframes h1animation {
+  0%   {background-color: red; transform: rotate3d(1, 2, 3, 20deg);}
+  25%  {background-color: yellow; transform: rotate3d(1, 2, 3, 90deg);}
+  50%  {background-color: darkmagenta; transform: rotate3d(1, 2, 3, 160deg);}
+  75%  {background-color: cyan; transform: rotate3d(1, 2, 3, 230deg);}
+  85% {background-color: green; transform: rotate3d(1, 2, 3, 300deg);}
+  100% {background-color: deeppink; transform: rotate3d(1, 2, 3, 20deg);}
+}
 
+h1:hover {
+  width: 180px;
+}
+
+h2 {
+  width: 109px; 
+  height: 68px;
+  padding: 15px; 
+  border: 3px; 
+  margin: 26px; 
+  position: absolute;
+  top: 10px;
+  left: 250px;
+  transform: scale(1.3, 0.7);
+  transition: height 3s;
+  font-size: 20px;
+  background-color:yellow;
+  animation-name: h2animation;
+  animation-duration: 4.5s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  font-size: 24px; 
+  font-stretch: 70%; 
+  font-weight: 80; 
+  line-height: 130%; 
+  color:maroon; 
+  text-decoration: underline red; 
+  text-shadow:violet 3px 3px; 
+  letter-spacing: 2px;
+}
+
+@keyframes h2animation {
+  0%   {background-color:red; left:250px; top:10px;}
+  25%  {background-color:yellow; left:450px; top:10px;}
+  50%  {background-color:blue; left:450px; top:160px;}
+  75%  {background-color:green; left:250px; top:160px;}
+  100% {background-color:cyan; left:250px; top:10px;}
+}
+
+h2:hover {
+  height: 155px;
+}
+
+h3 {
+  width: 105px; 
+  height: 105px;
+  padding: 7px; 
+  border: 4px; 
+  margin: 20px; 
+  position: relative;
+  top: 50px;
+  left: 77px; 
+  transform: skew(10deg, 15deg);
+  transition: height 4s, transform 4s;
+  font-size: 21px;
+  background-color: blue;
+  animation-name: h3animation;
+  animation-duration: 4.2s;
+  animation-delay: 4s;
+  animation-iteration-count: 3;
+  font-size: 28px; 
+  font-stretch: 120%; 
+  font-weight:500; 
+  line-height: 150%; 
+  color:yellow; 
+  text-decoration: mediumspringgreen wavy underline; 
+  text-shadow:violet 1px 4px; 
+  letter-spacing: -2px;
+}
+
+@keyframes h3animation {
+  0% {transform: skew(10deg, 15deg) rotate(0turn); top: 50px; left: 77px;}
+  50% {transform: skew(-30deg, 5deg) rotate(0.5turn); top: 100px; left: 377px;}
+  100% {transform: skew(10deg, 15deg) rotate(1turn); top: 50px; left: 77px;}
+}
+
+h3:hover {
+  height: 255px;
+  transform: skew(-40deg, 2deg);
+}
+
+button {
+  width: 80px; 
+  height: 70px;
+  padding: 5px; 
+  border: 1px; 
+  margin: 12px; 
+  position: relative; 
+  left: 650px;
+  transform: rotate(0.1turn);
+  transition: background-color 2s;
+  font-size: 29px;
+  background-color: greenyellow;
+  animation-name: buttonanimation;
+  animation-duration: 4.3s;
+  animation-iteration-count: 2;
+  animation-timing-function: ease;
+}
+
+@keyframes buttonanimation {
+  0% {transform: rotate(0deg) translateY(75px) rotate(0deg);}
+  100% {transform: rotate(360deg) translateY(75px) rotate(-360deg);}
+}
+
+button:hover {
+  background-color: coral;
+}
+
+
+div > div {
+  width: 160px; 
+  height: 160px;
+  padding: 1px; 
+  border: 1px; 
+  margin: 25px; 
+  position: relative;
+  left: 100px; 
+  transform: scale(1, 1) skew(0deg, 0deg);
+  transition: background-color 2.8s, transform 2.8s;
+  font-size: 35px;
+  background-color:rgb(104, 141, 141);
+  animation-name: divanimation;
+  animation-duration: 4s;
+  animation-delay: 8.2s;
+  animation-iteration-count: 2;
+}
+
+@keyframes divanimation {
+  0% {transform: scale(1, 1) skew(0deg, 0deg);}
+  33% {transform: scale(1, 2) skew(50deg, 0deg);}
+  66% {transform: scale(2, 1) skew(-50deg, 0deg);}
+  100% {transform: scale(1, 1) skew(0deg, 0deg);}
+}
+
+div > div:hover {
+  background-color:rgb(241, 236, 186);
+  transform: rotate(-70deg);
+}
+
+p {
+  width: 130px; 
+  height: 130px;
+  padding: 11px; 
+  border: 3px; 
+  margin: 1px; 
+  position: absolute;
+  top: 630px; 
+  transform: rotate(0.15turn);
+  transition: background-color 3s;
+  font-size: 25px;
+  background-color: yellow;
+}
+
+p:hover {
+  background-color:blueviolet;
+}
+
+mark {
+  width: 136px; 
+  height: 136px;
+  padding: 11px; 
+  border: 3px; 
+  margin: 1px; 
+  position: relative;
+  left: 210px;
+  transform: rotate(0.15turn);
+  transition: font-size 0.1s, background-color 0.1s;
+  font-size: 25px;
+  background-color:dodgerblue;
+  
+}
+
+mark:hover {
+  font-size: 0;
+  background-color: white;
+}
+
+mark:hover::after {
+  width: 141px; 
+  height: 141px;
+  padding: 11px; 
+  border: 3px; 
+  margin: 1px; 
+  content: "Mark is now yellow";
+  font-size: 25px;
+  background-color: yellow;
+}
+
+textarea {
+  width: 260px; 
+  height: 260px;
+  padding: 16px; 
+  border: 5px; 
+  margin: 1px; 
+  position: relative;
+  bottom: 50px;
+  left: 175px;
+  transform: scale(0.6, 1.4);
+  transition: transform 2.5s;
+  font-size: 32px;
+  background-color: crimson;
+  background-image: radial-gradient(circle, red, yellow, green);
+  background-position: bottom;
+  background-repeat:repeat-y;
+  background-size:contain;
+}
+
+textarea:hover {
+  transform: scale(1.5, 0.5);
+}
+
+li {
+  width: 190px; 
+  height: 190px;
+  padding: 6px; 
+  border: 7px; 
+  margin: 1px; 
+  position: relative;
+  top: 130px;
+  transform: rotate3d(1, 2, 0, 30deg);
+  transition: transform 3.5s;
+  font-size: 32px;
+  background-color:yellow;
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  background-position: top;
+  background-repeat:repeat-x;
+  background-size:auto;
+}
+
+li:hover {
+  transform: rotate3d(1, 2, 0, 160deg);
+}
+
+section {
+  width: 220px; 
+  height: 220px;
+  padding: 2px; 
+  border: 10px; 
+  margin: 8px; 
+  position: relative;
+  left: 320px;
+  transform: rotate3d(0, 2, 0, 0deg);
+  transition: transform 4s;
+  font-size: 27px;
+  background-color:magenta;
+  background-image: url("https://img.freepik.com/free-photo/mount-mont-blanc-covered-snow-reflecting-water-evening-chamonix-france_181624-33408.jpg?w=1380&t=st=1681307581~exp=1681308181~hmac=43005fc369d7fdee3a37228e5b54315e83d70729c94795aa671745a92c7e775b");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+section:hover {
+  transform: rotate3d(0, 2, 0, 130deg);
+}
 /* CSS reset END */
 
 body{
